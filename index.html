@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Popping Colors</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="background">
+            <div id="instructions">Welcome! Click on the visible circles to make them invisible, and find the hidden circles by hovering on them and click them to make them visible again! You get 1 point for each circle you click on, so try to get as many points as you can!</div>
+            <br> <br>
+            <div id="score">Your score is: 0</div>
+            <div id="blue_circle" onclick="changeState(this.id)" onmouseover="temporaryShow(this.id)" onmouseout="hide(this.id)"></div>
+            <div id="red_circle" onclick="changeState(this.id)" onmouseover="temporaryShow(this.id)" onmouseout="hide(this.id)"></div>
+            <div id="green_circle" onclick="changeState(this.id)" onmouseover="temporaryShow(this.id)" onmouseout="hide(this.id)"></div>
+            <div id="pink_circle" onclick="changeState(this.id)" onmouseover="temporaryShow(this.id)" onmouseout="hide(this.id)"></div>
+            <div id="purple_circle" onclick="changeState(this.id)" onmouseover="temporaryShow(this.id)" onmouseout="hide(this.id)"></div>
+            <div id="light_blue_circle" onclick="changeState(this.id)" onmouseover="temporaryShow(this.id)" onmouseout="hide(this.id)"></div>
+            <div id="orange_circle" onclick="changeState(this.id)" onmouseover="temporaryShow(this.id)" onmouseout="hide(this.id)"></div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
