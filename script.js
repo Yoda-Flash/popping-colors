@@ -12,33 +12,32 @@ pink_circle.style.opacity = "100%";
 purple_circle.style.opacity = "100%";
 light_blue_circle.style.opacity = "100%";
 orange_circle.style.opacity = "100%";
+blue_circle.dataset.hidden = "false";
+red_circle.dataset.hidden = "false";
+green_circle.dataset.hidden = "false";
+pink_circle.dataset.hidden = "false";
+purple_circle.dataset.hidden = "false";
+light_blue_circle.dataset.hidden = "false";
+orange_circle.dataset.hidden = "false";
 
 var score = document.getElementById("score");
 var current_score = 0;
-var hidden = false;
 
 const changeState = (id) => {
     var circle = document.getElementById(id);
-    circle.style.opacity = hidden === false ? "0" : "1";
+    circle.style.opacity = circle.dataset.hidden === "false" ? "0" : "1";
     if (circle.style.opacity === "0"){
-        hidden = true;
-        console.log("Hidden is" + hidden)
-        console.log("Opacity: " + circle.style.opacity);
-    } else if (circle.style.opacity !== "0"){
-        hidden = false;
-        console.log(hidden)
-        console.log("Opacity of circle is: " + circle.style.opacity);
-    }
+        circle.dataset.hidden = "true";
+   } else if (circle.style.opacity !== "0"){
+        circle.dataset.hidden = "false";
+   }
     current_score += 1;
     score.innerHTML = "Your score is: " + current_score;
-    console.log(hidden)
 }
 
 const temporaryShow = (id) => {
     var circle = document.getElementById(id);
-    console.log("Hidden is: " + hidden);
-    if (hidden === true) {
-        console.log("temporarily showing");
+    if (circle.style.opacity === "0") {
         circle.style.opacity = "100%";
     }
 
@@ -46,8 +45,7 @@ const temporaryShow = (id) => {
 
 const hide = (id) => {
     var circle = document.getElementById(id);
-    if (hidden === true){
+    if (circle.dataset.hidden === "true"){
         circle.style.opacity = "0";
-        hidden = false;
     }
 }

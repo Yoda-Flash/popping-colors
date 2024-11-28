@@ -41,13 +41,16 @@ body {
 
 @keyframes float100 {
     0% {
-        transform: translateY(0);
+        transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(50px);
     }
     50% {
-        transform: translateY(100px);
+        transform: translateX(-250px) translateY(100px);
     }
     100% {
-        transform: translateY(0px);
+        transform: translateX(0) translateY(0px);
     }
 }
 
@@ -61,7 +64,7 @@ body {
     background: radial-gradient(circle at center, #02023b 50%, #005970 100%);
     border-radius: 50%;
     box-shadow: 0 0 30px rgba(33, 65, 225, 0.8);
-    animation: pulse50 1.5s infinite alternate, float100 4s ease-in-out infinite;
+    animation: pulse50 1.5s infinite alternate, float100 4s ease-in-out infinite alternate;
     animation-composition: add;
     visibility: visible;
 }
@@ -95,13 +98,13 @@ body {
 
 @keyframes float115 {
     0% {
-        transform: translateY(-15px);
+        transform: translateX(0) translateY(-15px);
     }
     50% {
-        transform: translateY(115px);
+        transform: translateX(150px) translateY(115px);
     }
     100% {
-        transform: translateY(-15px);
+        transform: translateX(-20px) translateY(-15px);
     }
 }
 
@@ -115,7 +118,7 @@ body {
     background: radial-gradient(circle at center, #429107, #4eb200);
     border-radius: 50%;
     box-shadow: 0 0 30px rgb(71, 140, 30);
-    animation: pulse50 1.5s infinite alternate, float115 2.5s infinite;
+    animation: pulse50 1.5s infinite alternate, float115 2.5s infinite alternate;
     animation-composition: add;
     visibility: visible;
 }
@@ -133,8 +136,11 @@ body {
     0% {
         transform: translateY(0px);
     }
+    25% {
+        transform: translateX(300px);
+    }
     50% {
-        transform: translateY(225px);
+        transform: translateX(150px) translateY(100px);
     }
     100% {
         transform: translateY(0px);
@@ -143,7 +149,7 @@ body {
 
 #pink_circle {
     position: relative;
-    top: 30%;
+    top: 25%;
     left: 15%;
     width: 80px;
     height: 80px;
@@ -170,7 +176,7 @@ body {
 
 #purple_circle {
     position: relative;
-    top: 30%;
+    top: 5%;
     left: 36%;
     width: 80px;
     height: 80px;
@@ -178,7 +184,7 @@ body {
     background: radial-gradient(circle at center, rgba(89, 0, 114, 0.92), rgba(145, 41, 190, 0.89));
     border-radius: 50%;
     box-shadow: 0 0 30px rgb(213, 89, 255);
-    animation: pulse25 1.5s infinite alternate, float225 10s infinite;
+    animation: pulse25 1.5s infinite alternate, float225 6s infinite alternate-reverse;
     animation-composition: add;
     visibility: visible;
 }
@@ -193,7 +199,7 @@ body {
     background: radial-gradient(circle at center, rgba(91, 191, 255, 0.92), rgba(140, 185, 252, 0.89));
     border-radius: 50%;
     box-shadow: 0 0 30px rgb(83, 191, 255);
-    animation: pulse50 1.5s infinite alternate, float-225 5s infinite;
+    animation: pulse50 1.5s infinite alternate, float-225 3s infinite;
     animation-composition: add;
     visibility: visible;
 }
@@ -209,15 +215,15 @@ body {
 
 #orange_circle {
     position: relative;
-    top: 15%;
-    left: 85%;
+    top: -35%;
+    left: 25%;
     width: 45px;
     height: 45px;
     overflow: hidden;
     background: radial-gradient(circle at center, rgba(253, 173, 81, 0.92), rgba(213, 129, 42, 0.89));
     border-radius: 50%;
     box-shadow: 0 0 30px rgb(255, 212, 157);
-    animation: pulse75 1.5s infinite alternate, float225 2s infinite;
+    animation: pulse75 1.5s infinite alternate, float225 2s infinite reverse;
     animation-composition: add;
     visibility: visible;
 }
